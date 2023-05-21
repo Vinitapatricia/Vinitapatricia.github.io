@@ -1,0 +1,267 @@
+:root{
+    --black : #202020;
+    --white : #f9feff;
+}
+
+@font-face{
+    font-family: titleFont;
+    src: url(acorn.woff);
+}
+
+@font-face{
+    font-family: bodyFont;
+    src: url(gt.woff);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+
+}
+
+/* NAV */
+    nav{
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        margin-top: 30px;
+        z-index: 100;
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        background-color: #202020d8;
+        border-radius: 1.5rem;
+        height: 3.5rem;
+    }
+
+    nav ul li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+    }
+
+    nav ul li a{
+        color: var(--white);
+        text-decoration: none;
+        font-family: bodyFont;
+        font-size: 1.2rem;
+    }
+
+    .work{
+        height: 2.3rem;
+        border-radius: 1.5rem;
+        background-color: #f9feff32;
+        transition: all .2s ease-in-out;
+        display: flex;
+        align-items: center;
+    }
+
+    .slash{
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        background-image: linear-gradient(60deg, #ff6596, #60bef8);
+        animation: fontAnimatedGradient 5s infinite alternate;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        box-shadow: inset 0 0 0 2px hsla(160, 52%, 71%, .2);
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 6px;
+        margin-left: 10px;
+    }
+
+/* HOME PAGE */
+    .homepage{
+        padding-top: 7rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: -70px;
+    }
+
+    .name{
+        font-family: titleFont;
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem);
+        color: var(--white);
+        margin-bottom: -100px;
+    }
+
+    .job{
+        background-image: linear-gradient(60deg, #ff6596, #60bef8, #d88cff);
+        animation: fontAnimatedGradient 5s infinite alternate;
+        background-size: 600% 600%;
+        font-family: titleFont;
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes fontAnimatedGradient{
+        0%{
+            background-position: 0 0;
+        }
+        100%{
+            background-position: 100% 0;
+        }
+    }
+
+    .star1{
+        position: absolute;
+        top: 35%;
+        left: 80%;
+    }
+    .star2{
+        position: absolute;
+        top: 68%;
+        left: 7%;
+    }
+
+    .subtitle{
+        width: 65%;
+    }
+
+    .subtitle p{
+        font-family: bodyFont;
+        font-size: 1.3rem;
+        color: var(--white);
+        text-align: center;
+    }
+
+/* DISPLAY PAGE */
+    .displaypage{
+        margin-top: 200px;
+        max-width: 1600px;;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column  ;
+    }
+
+    .title{
+        color: var(--white);
+        font-family: titleFont;
+        font-size: 2.5rem;
+        display: flex;
+        margin-bottom: -50px;
+    }
+
+    .project{
+        width: 93%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .pygame {
+        width: calc(200vh/3 + 5vh);
+        height: 90vh;
+        background-color: hsla(284, 61%, 74%, 1);
+        border-radius: 3.5rem;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .pygame:hover {
+        animation-name: bounce;
+        animation-timing-function: ease;
+    }
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+
+    .pygame-text{
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        width: 90%;
+        margin-right: -20px;
+        margin-top: 20px;
+    }
+
+    .pygame h2{
+        color: var(--black);
+        font-family: titleFont;
+        font-size: 2.5rem;
+        margin-bottom: -10px;
+    }
+
+    .pygame p{
+        color: var(--white);
+        font-family: bodyFont;
+        font-size: 1rem;
+        margin-bottom: -10px;
+        text-align: right;
+        width: 80%;
+    }
+
+    .pygame .image{
+        display: grid;
+        overflow: hidden;
+        margin-left: 70px;
+        margin-top: 50px;
+        
+    }
+
+    .pygame img{
+        max-width: inherit;
+        height: 60vh;
+        width: 100vh;
+        z-index: 50;
+        border-radius: 0.5rem;
+    }
+
+    .tkinter{
+        width: calc(200vh/3*2 - 18vh);
+        height: 90vh;
+        background-color: hsla(172, 45%, 75%, 1);
+        border-radius: 3.5rem;
+    }
+
+    .js {
+        width: calc(200vh/3*2 - 18vh);
+        height: 90vh;
+        background-color: hsla(22, 62%, 76%, 1);
+        border-radius: 3.5rem;
+    }
+
+    .html {
+        width: calc(200vh/3 + 5vh);
+        height: 90vh;
+        background-color: hsla(206, 84%, 86%, 1);;
+        border-radius: 3.5rem;
+    }
