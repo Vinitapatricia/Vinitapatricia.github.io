@@ -20,6 +20,17 @@ body{
     height: 100%;
     background: var(--black);
     overflow-x: hidden;
+    transition: background .2s linear;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "liga" on;
+    font-feature-settings: "liga" on;
+    -moz-font-feature-settings: "liga" on;
+}
+
+img{
+    border-radius: 1rem;
 }
 
 /* NAV */
@@ -150,7 +161,7 @@ body{
         margin-top: 180px;
     }
 
-    .gudang{
+    .viota{
         width: 80%;
         height: 100px;
         background-color:#60bef8;
@@ -159,38 +170,48 @@ body{
         display: flex;
         flex-direction: column;
         cursor: pointer;
+        -webkit-transition: all 1s;
+        transition: all 1s;
     }
 
-    .gudang .overview{
+    .viota .overview{
         opacity: 0;
         z-index: -100;
     }
 
-    .gudang .headerg{
+    .viota .header{
         width: 100%;
         display: flex;
         justify-content: space-between;
         max-height: 150px;
     }
 
-    .gudang .headerg h1{
+    .viota .header h1{
         color: var(--black);
         font-family: titleFont;
         font-size: 2.5rem;
         margin-left: 100px;
     }
 
-    .gudang .headerg img{
+    .viota .header img{
         width: 100px;
     }
 
-    .gudang .subtitle{
+    .viota .subtitle{
         opacity: 0;
-        height: 0;
+        height: 0px;
     }
 
-    .gudang.clicked{
-        height: 1850px;
+    .viota .detail, .viota .detail img, .viota .detailm, .viota .detailm img{
+        height: 0px;
+    }
+
+    .viota .overview, .viota .overview img{
+        height: 0px;
+    }
+
+    .viota.clicked{
+        height: 4400px;
         background-color: #5252529e;
         border-color: #60bef8;
         border-width: 5px;
@@ -198,12 +219,13 @@ body{
         
     }
 
-    .gudang.clicked .headerg h1{
+    .viota.clicked .header h1{
         font-size: 2.8rem;
         color: #60bef8;
     }
 
-    .gudang.clicked .overview{
+    .viota.clicked .overview{
+        height: auto;
         opacity: 1;
         width: 100%;
         display: flex;
@@ -214,26 +236,27 @@ body{
         z-index: 1;
     }
 
-    .gudang.clicked .overview img{
+    .viota.clicked .overview img{
         width: 80%;
+        height: auto;
     }
 
-    .gudang.clicked .overview h1{
+    .viota.clicked .overview h1{
         margin-top: 100px;
         font-family: titleFont;
         font-size: 3rem;
         color: hsla(212, 52%, 71%, 0.876);
     }
 
-    .gudang.clicked .overview a{
-        margin-top: 80px;
+    .viota.clicked .overview a{
+        margin-top: -30px;
         margin-bottom: 80px;
         font-family: titleFont;
         font-size: 3rem;
         color: hsla(212, 52%, 71%, 0.876);
     }
 
-    .gudang.clicked .overview p{
+    .viota.clicked .overview p{
         width: 50%;
         font-family: bodyFont;
         color: var(--white);
@@ -241,74 +264,121 @@ body{
         line-height: 160%;;
     }
 
-    .gudang.clicked .subtitle{
+    .viota.clicked .subtitle{
         width: 100%;
         display: flex;
         justify-content: space-around;
     }
 
-    .gudang.clicked .subtitle-detail{
+    .viota.clicked .subtitle-detail{
         display: flex;
         align-items: center;
         flex-direction: column;
     }
 
-    .gudang.clicked .subtitle h2{
+    .viota.clicked .subtitle h2{
         font-family: bodyFont;
         font-size: 1.3rem;
         color: var(--white);
     }
 
-    .gudang.clicked .subtitle p{
+    .viota.clicked .subtitle p{
         font-family: bodyFont;
         font-size: 1rem;
         color: hsla(212, 52%, 71%, 0.876);
         margin-top: -5px;
     }
 
+    .viota.clicked .detail{
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
+    .viota.clicked .detailm{
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: -70px;
+    }
 
-    .game{
+    .viota.clicked .detail img{
+        width: 40%;
+        height: auto;
+        margin: 10px;
+    }
+
+    .viota.clicked .detailm img{
+        width: auto;
+        height: 80%;
+        margin: 25px;
+    }
+
+    .viota.clicked .detail img:hover{
+        width: 42%;
+        box-shadow: 1px 1px 20px var(--black);
+    }
+
+    .viota.clicked .detailm img:hover{
+        height: 82%;
+        box-shadow: 1px 1px 20px var(--black);   
+    }
+
+    .mental{
         width: 80%;
         height: 100px;
-        background-color: hsla(284, 61%, 74%, 1);
+        background-color:hsla(284, 61%, 74%, 1);
         border-radius: 4rem;
         margin-bottom: 100px;
         display: flex;
         flex-direction: column;
         cursor: pointer;
+        -webkit-transition: all 1s;
+        transition: all 1s;
     }
 
-    .game .overview{
+    .mental .overview{
         opacity: 0;
         z-index: -100;
     }
 
-    .game .headerga{
+    .mental .header{
         width: 100%;
         display: flex;
         justify-content: space-between;
         max-height: 150px;
     }
 
-    .game .headerga h1{
+    .mental .header h1{
         color: var(--black);
         font-family: titleFont;
         font-size: 2.5rem;
         margin-left: 100px;
     }
 
-    .game .headerga img{
+    .mental .header img{
         width: 100px;
     }
 
-    .game .subtitle{
+    .mental .subtitle{
         opacity: 0;
-        height: 0;
+        height: 0px;
     }
 
-    .game.clicked{
-        height: 2300px;
+    .mental .detail, .mental .detail img, .mental .detailm, .mental .detailm img{
+        height: 0px;
+    }
+
+    .mental .overview, .mental .overview img{
+        height: 0px;
+    }
+
+    .mental.clicked{
+        height: 3600px;
         background-color: #5252529e;
         border-color: hsla(284, 61%, 74%, 1);
         border-width: 5px;
@@ -316,12 +386,13 @@ body{
         
     }
 
-    .game.clicked .headerga h1{
+    .mental.clicked .header h1{
         font-size: 2.8rem;
         color: hsla(284, 61%, 74%, 1);
     }
 
-    .game.clicked .overview{
+    .mental.clicked .overview{
+        height: auto;
         opacity: 1;
         width: 100%;
         display: flex;
@@ -332,24 +403,27 @@ body{
         z-index: 1;
     }
 
-    .game.clicked .overview img{
+    .mental.clicked .overview img{
         width: 80%;
+        height: auto;
     }
 
-    .game.clicked .overview h1{
+    .mental.clicked .overview h1{
         margin-top: 100px;
         font-family: titleFont;
         font-size: 3rem;
-        color: hsla(284, 61%, 74%, 0.876)
+        color: hsla(284, 61%, 74%, 0.876);
     }
 
-    .game.clicked .overview a{
+    .mental.clicked .overview a{
+        margin-top: -30px;
+        margin-bottom: 80px;
         font-family: titleFont;
         font-size: 3rem;
-        color: hsla(284, 61%, 74%, 0.876)
+        color: hsla(284, 61%, 74%, 0.876);
     }
 
-    .game.clicked .overview p{
+    .mental.clicked .overview p{
         width: 50%;
         font-family: bodyFont;
         color: var(--white);
@@ -357,172 +431,68 @@ body{
         line-height: 160%;;
     }
 
-    .game.clicked .subtitle{
+    .mental.clicked .subtitle{
         width: 100%;
         display: flex;
         justify-content: space-around;
     }
 
-    .game.clicked .subtitle-detail{
+    .mental.clicked .subtitle-detail{
         display: flex;
         align-items: center;
         flex-direction: column;
     }
 
-    .game.clicked .subtitle h2{
+    .mental.clicked .subtitle h2{
         font-family: bodyFont;
         font-size: 1.3rem;
         color: var(--white);
     }
 
-    .game.clicked .subtitle p{
+    .mental.clicked .subtitle p{
         font-family: bodyFont;
         font-size: 1rem;
         color: hsla(284, 61%, 74%, 0.876);
         margin-top: -5px;
     }
 
-    .game.clicked .overview iframe{
-        margin-top: 100px;
-    }
-
-    .tic{
-        width: 80%;
-        height: 100px;
-        background-color: hsla(22, 62%, 76%, 1);
-        border-radius: 4rem;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-    }
-
-    .tic .overview{
-        opacity: 0;
-        z-index: -100;
-    }
-    
-    .tic .im{
-        opacity: 0;
-    }
-
-    .tic .headerga{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        max-height: 150px;
-    }
-
-    .tic .headerga h1{
-        color: var(--black);
-        font-family: titleFont;
-        font-size: 2.5rem;
-        margin-left: 100px;
-    }
-
-    .tic .headerga img{
-        width: 100px;
-    }
-
-    .tic .subtitle{
-        opacity: 0;
-        height: 0;
-    }
-
-    .tic.clicked{
-        height: 2150px;
-        background-color: #5252529e;
-        border-color: hsla(22, 62%, 76%, 1);
-        border-width: 5px;
-        border-style: solid;
-        
-    }
-
-    .tic.clicked .headerga h1{
-        font-size: 2.8rem;
-        color: hsla(22, 62%, 76%, 1);
-    }
-
-    .tic.clicked .overview{
-        opacity: 1;
-        width: 100%;
+    .mental.clicked .detail{
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 50px;
-        flex-direction: column;
-        z-index: 1;
+        flex-wrap: wrap;
     }
 
-    .tic.clicked .overview img{
-        /* width: 80%; */
-        height: 500px;
-    }
-
-    .tic.clicked .overview h1{
-        margin-top: 100px;
-        font-family: titleFont;
-        font-size: 3rem;
-        color: hsla(22, 62%, 76%, 0.876);
-    }
-
-    .tic.clicked .overview a{
-        margin-top: 100px;
-        font-family: titleFont;
-        font-size: 3rem;
-        color: hsla(22, 62%, 76%, 0.876);
-    }
-
-    .tic.clicked .overview p{
-        width: 50%;
-        font-family: bodyFont;
-        color: var(--white);
-        font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem);;
-        line-height: 160%;;
-    }
-
-    .tic.clicked .subtitle{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .tic.clicked .subtitle-detail{
+    .mental.clicked .detailm{
+        height: auto;
         display: flex;
         align-items: center;
-        flex-direction: column;
-    }
-
-    .tic.clicked .subtitle h2{
-        font-family: bodyFont;
-        font-size: 1.3rem;
-        color: var(--white);
-    }
-
-    .tic.clicked .subtitle p{
-        font-family: bodyFont;
-        font-size: 1rem;
-        color: hsla(22, 62%, 76%, 0.876);
-        margin-top: -5px;
-    }
-
-    .tic.clicked .im{
-        opacity: 1;
-        display: flex;
         justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: -70px;
     }
 
-    .tic.clicked .im h1{
-        margin-top: 100px;
-        font-family: titleFont;
-        font-size: 3rem;
-        color: hsla(22, 62%, 76%, 0.876);
+    .mental.clicked .detail img{
+        width: 40%;
+        height: auto;
+        margin: 10px;
     }
 
-    .tic.clicked .im .im-detail img{
-        height: 450px;
-        margin: 30px;
+    .mental.clicked .detailm img{
+        width: auto;
+        height: 80%;
+        margin: 25px;
+    }
+
+    .mental.clicked .detail img:hover{
+        width: 42%;
+        box-shadow: 1px 1px 20px var(--black);
+    }
+
+    .mental.clicked .detailm img:hover{
+        height: 82%;
+        box-shadow: 1px 1px 20px var(--black);   
     }
 
     .next{
@@ -549,6 +519,17 @@ body{
     .next:hover{
         border-width: 5px;
         border-style: solid;
+    }
+
+/* ANIMATION */
+    .viota.animate {
+        -webkit-transition: all .5s, background, 2s .5s linear;
+        transition: all .5s, background 2s .5s linear;
+    }
+
+    .mental.animate {
+        -webkit-transition: all .5s, background, 2s .5s linear;
+        transition: all .5s, background 2s .5s linear;
     }
 
 /* FOOTER */

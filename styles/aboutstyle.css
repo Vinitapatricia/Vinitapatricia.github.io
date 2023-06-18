@@ -1,0 +1,862 @@
+:root{
+    --black : #202020;
+    --white : #f9feff;
+}
+
+@font-face{
+    font-family: titleFont;
+    src: url(acorn.woff);
+}
+
+@font-face{
+    font-family: bodyFont;
+    src: url(gt.woff);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    transition: background .2s linear;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "liga" on;
+    font-feature-settings: "liga" on;
+    -moz-font-feature-settings: "liga" on;
+}
+
+/* NAV */
+    nav{
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        margin-top: 30px;
+        z-index: 100;
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        background-color: #202020d8;
+        border-radius: 1.5rem;
+        height: 3.5rem;
+    }
+
+    nav ul li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+    }
+
+    nav ul li a{
+        color: var(--white);
+        text-decoration: none;
+        font-family: bodyFont;
+        font-size: 1.2rem;
+    }
+
+    .about{
+        height: 2.3rem;
+        border-radius: 1.5rem;
+        background-color: #f9feff32;
+        transition: all .2s ease-in-out;
+        display: flex;
+        align-items: center;
+    }
+
+    .slash{
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: var(--white);
+        box-shadow: inset 0 0 0 2px hsla(310, 52%, 71%, 0.528);
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 6px;
+        margin-left: 10px;
+    }
+
+/* HOME PAGE */
+    .homepage{
+        padding-top: 7rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: -70px;
+    }
+
+    .job{
+        background-image: linear-gradient(60deg, #ff6596, #60bef8, #d88cff);
+        animation: fontAnimatedGradient 5s infinite alternate;
+        background-size: 600% 600%;
+        font-family: titleFont;
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .star1{
+        position: absolute;
+        top: 25%;
+        left: 70%;
+    }
+
+    .star2{
+        position: absolute;
+        top: 48%;
+        left: 23%;
+    }
+
+    @keyframes fontAnimatedGradient{
+        0%{
+            background-position: 0 0;
+        }
+        100%{
+            background-position: 100% 0;
+        }
+    }
+
+/* CONTENT */
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .content .aboutme{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 85%;
+    }
+
+    .content .aboutme img{
+        width: 380px;
+        height: auto;
+        border-radius: 16rem 16rem 0rem 0rem;
+    }
+
+    .content .aboutme .name{
+        position: relative;
+        margin-top: -83px;
+        background-color: rgba(80, 38, 73, 0.828);
+        width: 380px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content .aboutme .name h2{
+        font-size: 53px;
+        color: var(--white);
+    }
+
+    .content .aboutme .desc{
+        margin-left: 50px;
+    }
+
+    .content .aboutme .desc h2{
+        font-family: titleFont;
+        color: hsla(310, 52%, 71%);
+        font-size: clamp(1.875rem, 1.301rem + 2.449vw, 3.75rem - 1rem);
+    }
+
+    .content .aboutme .desc p{
+        font-family: bodyFont;
+        color: var(--white);
+        font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem);
+        line-height: 160%;
+    }
+
+    .quali{
+        margin-top: 150px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .quali h1{
+        color: var(--white);
+        font-family: titleFont;
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .quali .quali-detail{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quali .quali-detail .py{
+        background-color: #60bef8;
+        width: 300px;
+        height: 300px;
+        border-radius: 2.5rem;
+        margin: 30px;
+        box-shadow: 1px 1px 20px #66666645;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+
+    .quali .quali-detail .py i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        color: #003658;
+        animation-duration: 1s;
+        animation: bounce 3s ease infinite;
+    }
+
+    .quali .quali-detail .py h1{
+        font-size: 3rem;
+        color: var(--black);
+        padding: 0px;
+        margin: 0px;
+        margin-top: 50px;
+        
+        opacity: 1;
+        height: auto;
+    }
+
+    .quali .quali-detail .py .py-details, .quali .quali-detail .py .py-detail p{
+        transition: 0.3s;
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .py .py-detail-g, .quali .quali-detail .py .py-detail{
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .py.hovered{
+        justify-content: flex-end;
+        width: 310px;
+        height: 310px;
+        box-shadow: 0px 0px 20px #666666c3; 
+    }
+
+    .quali .quali-detail .py.hovered .py-details{
+        height: auto;
+        opacity: 1;
+    }
+
+    .quali .quali-detail .py.hovered .py-detail-g{
+        background-image: linear-gradient( #60bef89a, #003658);
+        height: 100px;
+        width: 310px;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .py.hovered .py-detail{
+        background-color: #003658;
+        border-radius: 0px 0px 2.5rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .py.hovered .py-detail p{
+        font-family: bodyFont;
+        color: var(--white);
+        font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem - 2.5rem);
+        line-height: 160%;
+        text-align: justify;
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+        width: 80%;
+    }
+
+    .quali .quali-detail .py.hovered h1{
+        opacity: 0;
+        height: 0px;
+    }
+
+    .quali .quali-detail .py.hovered i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        z-index: 0;
+        margin-bottom: -180px;
+        padding: 0px;
+        z-index: 0;
+    }
+
+
+    .quali .quali-detail .cpp{
+        background-color: rgb(229, 148, 220);
+        width: 300px;
+        height: 300px;
+        border-radius: 2.5rem;
+        margin: 30px;
+        box-shadow: 1px 1px 20px #66666645;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+
+    .quali .quali-detail .cpp i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        color: rgb(91, 18, 82);
+        animation-duration: 1s;
+        animation: bounce 3s ease infinite;
+    }
+
+    .quali .quali-detail .cpp h1{
+        font-size: 3rem;
+        color: var(--black);
+        padding: 0px;
+        margin: 0px;
+        margin-top: 50px;
+        
+        opacity: 1;
+        height: auto;
+    }
+
+    .quali .quali-detail .cpp .cpp-details, .quali .quali-detail .cpp .cpp-detail p{
+        transition: 0.3s;
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .cpp .py-detail-g, .quali .quali-detail .cpp .cpp-detail{
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .cpp.hovered{
+        justify-content: flex-end;
+        width: 310px;
+        height: 310px;
+        box-shadow: 0px 0px 20px #666666c3; 
+    }
+
+    .quali .quali-detail .cpp.hovered .cpp-details{
+        height: auto;
+        opacity: 1;
+    }
+
+    .quali .quali-detail .cpp.hovered .cpp-detail-g{
+        background-image: linear-gradient( rgba(229, 148, 220, 0.641), rgb(91, 18, 82));
+        height: 100px;
+        width: 310px;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .cpp.hovered .cpp-detail{
+        background-color: rgb(91, 18, 82);
+        border-radius: 0px 0px 2.5rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .cpp.hovered .cpp-detail p{
+        font-family: bodyFont;
+        color: var(--white);
+        font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem - 2.5rem);
+        line-height: 160%;
+        text-align: justify;
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+        width: 80%;
+    }
+
+    .quali .quali-detail .cpp.hovered h1{
+        opacity: 0;
+        height: 0px;
+    }
+
+    .quali .quali-detail .cpp.hovered i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        z-index: 0;
+        margin-bottom: -180px;
+        padding: 0px;
+        z-index: 0;
+    }
+
+
+    .quali .quali-detail .js{
+        background-color: rgb(135, 219, 208);
+        width: 300px;
+        height: 300px;
+        border-radius: 2.5rem;
+        margin: 30px;
+        box-shadow: 1px 1px 20px #66666645;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+
+    .quali .quali-detail .js i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        color: rgb(8, 59, 53);
+        animation-duration: 1s;
+        animation: bounce 3s ease infinite;
+    }
+
+    .quali .quali-detail .js h1{
+        font-size: 3rem;
+        color: var(--black);
+        padding: 0px;
+        margin: 0px;
+        margin-top: 50px;
+        
+        opacity: 1;
+        height: auto;
+    }
+
+    .quali .quali-detail .js .js-details, .quali .quali-detail .js .js-detail p{
+        transition: 0.3s;
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .js .py-detail-g, .quali .quali-detail .js .js-detail{
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .js.hovered{
+        justify-content: flex-end;
+        width: 310px;
+        height: 310px;
+        box-shadow: 0px 0px 20px #666666c3; 
+    }
+
+    .quali .quali-detail .js.hovered .js-details{
+        height: auto;
+        opacity: 1;
+    }
+
+    .quali .quali-detail .js.hovered .js-detail-g{
+        background-image: linear-gradient( rgb(135, 219, 208), rgb(8, 59, 53));
+        height: 100px;
+        width: 310px;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .js.hovered .js-detail{
+        background-color: rgb(8, 59, 53);
+        border-radius: 0px 0px 2.5rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .js.hovered .js-detail p{
+        font-family: bodyFont;
+        color: var(--white);
+        font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem - 2.5rem);
+        line-height: 160%;
+        text-align: justify;
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+        width: 80%;
+    }
+
+    .quali .quali-detail .js.hovered h1{
+        opacity: 0;
+        height: 0px;
+    }
+
+    .quali .quali-detail .js.hovered i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        z-index: 0;
+        margin-bottom: -180px;
+        padding: 0px;
+        z-index: 0;
+    }
+
+
+    .quali .quali-detail .html{
+        background-color: rgb(232, 210, 156);
+        width: 300px;
+        height: 300px;
+        border-radius: 2.5rem;
+        margin: 30px;
+        box-shadow: 1px 1px 20px #66666645;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+
+    .quali .quali-detail .html i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        color: rgb(104, 80, 19);
+        animation-duration: 1s;
+        animation: bounce 3s ease infinite;
+    }
+
+    .quali .quali-detail .html h1{
+        font-size: 3rem;
+        color: var(--black);
+        padding: 0px;
+        margin: 0px;
+        margin-top: 50px;
+        
+        opacity: 1;
+        height: auto;
+    }
+
+    .quali .quali-detail .html .html-details, .quali .quali-detail .html .html-detail p{
+        transition: 0.3s;
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .html .py-detail-g, .quali .quali-detail .html .html-detail{
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .html.hovered{
+        justify-content: flex-end;
+        width: 310px;
+        height: 310px;
+        box-shadow: 0px 0px 20px #666666c3; 
+    }
+
+    .quali .quali-detail .html.hovered .html-details{
+        height: auto;
+        opacity: 1;
+    }
+
+    .quali .quali-detail .html.hovered .html-detail-g{
+        background-image: linear-gradient( rgb(232, 210, 156), rgb(104, 80, 19));
+        height: 100px;
+        width: 310px;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .html.hovered .html-detail{
+        background-color: rgb(104, 80, 19);
+        border-radius: 0px 0px 2.5rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .html.hovered .html-detail p{
+        font-family: bodyFont;
+        color: var(--white);
+        font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem - 2.5rem);
+        line-height: 160%;
+        text-align: justify;
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+        width: 80%;
+    }
+
+    .quali .quali-detail .html.hovered h1{
+        opacity: 0;
+        height: 0px;
+    }
+
+    .quali .quali-detail .html.hovered i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        z-index: 0;
+        margin-bottom: -180px;
+        padding: 0px;
+        z-index: 0;
+    }
+
+
+    .quali .quali-detail .css{
+        background-color: rgb(195, 156, 232);
+        width: 300px;
+        height: 300px;
+        border-radius: 2.5rem;
+        margin: 30px;
+        box-shadow: 1px 1px 20px #66666645;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+
+    .quali .quali-detail .css i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        color: rgb(59, 29, 88);
+        animation-duration: 1s;
+        animation: bounce 3s ease infinite;
+    }
+
+    .quali .quali-detail .css h1{
+        font-size: 3rem;
+        color: var(--black);
+        padding: 0px;
+        margin: 0px;
+        margin-top: 50px;
+        
+        opacity: 1;
+        height: auto;
+    }
+
+    .quali .quali-detail .css .css-details, .quali .quali-detail .css .css-detail p{
+        transition: 0.3s;
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .css .py-detail-g, .quali .quali-detail .css .css-detail{
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .css.hovered{
+        justify-content: flex-end;
+        width: 310px;
+        height: 310px;
+        box-shadow: 0px 0px 20px #666666c3; 
+    }
+
+    .quali .quali-detail .css.hovered .css-details{
+        height: auto;
+        opacity: 1;
+    }
+
+    .quali .quali-detail .css.hovered .css-detail-g{
+        background-image: linear-gradient( rgb(195, 156, 232), rgb(59, 29, 88));
+        height: 100px;
+        width: 310px;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .css.hovered .css-detail{
+        background-color: rgb(59, 29, 88);
+        border-radius: 0px 0px 2.5rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .css.hovered .css-detail p{
+        font-family: bodyFont;
+        color: var(--white);
+        font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem - 2.5rem);
+        line-height: 160%;
+        text-align: justify;
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+        width: 80%;
+    }
+
+    .quali .quali-detail .css.hovered h1{
+        opacity: 0;
+        height: 0px;
+    }
+
+    .quali .quali-detail .css.hovered i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        z-index: 0;
+        margin-bottom: -180px;
+        padding: 0px;
+        z-index: 0;
+    }
+
+
+    .quali .quali-detail .react{
+        background-color: rgb(232, 156, 156);
+        width: 300px;
+        height: 300px;
+        border-radius: 2.5rem;
+        margin: 30px;
+        box-shadow: 1px 1px 20px #66666645;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: hidden; 
+    }
+
+    .quali .quali-detail .react i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        color: rgb(86, 21, 21);
+        animation-duration: 1s;
+        animation: bounce 3s ease infinite;
+    }
+
+    .quali .quali-detail .react h1{
+        font-size: 3rem;
+        color: var(--black);
+        padding: 0px;
+        margin: 0px;
+        margin-top: 50px;
+        
+        opacity: 1;
+        height: auto;
+    }
+
+    .quali .quali-detail .react .react-details, .quali .quali-detail .react .react-detail p{
+        transition: 0.3s;
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .react .py-detail-g, .quali .quali-detail .react .react-detail{
+        height: 0px;
+        opacity: 0;
+    }
+
+    .quali .quali-detail .react.hovered{
+        justify-content: flex-end;
+        width: 310px;
+        height: 310px;
+        box-shadow: 0px 0px 20px #666666c3; 
+    }
+
+    .quali .quali-detail .react.hovered .react-details{
+        height: auto;
+        opacity: 1;
+    }
+
+    .quali .quali-detail .react.hovered .react-detail-g{
+        background-image: linear-gradient( rgb(232, 156, 156), rgb(86, 21, 21));
+        height: 100px;
+        width: 310px;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .react.hovered .react-detail{
+        background-color: rgb(86, 21, 21);
+        border-radius: 0px 0px 2.5rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .quali .quali-detail .react.hovered .react-detail p{
+        font-family: bodyFont;
+        color: var(--white);
+        font-size: clamp(1rem, .8852rem + .4898vw, 1.375rem - 2.5rem);
+        line-height: 160%;
+        text-align: justify;
+        height: auto;
+        opacity: 1;
+        z-index: 10;
+        width: 80%;
+    }
+
+    .quali .quali-detail .react.hovered h1{
+        opacity: 0;
+        height: 0px;
+    }
+
+    .quali .quali-detail .react.hovered i{
+        font-size: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem - 8rem);
+        z-index: 0;
+        margin-bottom: -180px;
+        padding: 0px;
+        z-index: 0;
+    }
+
+    @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+      }
+
+/* FOOTER */
+    footer{
+        margin-right: 100px;
+        margin-top: 150px;
+        height: 350px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer .spo{
+        border-radius: 2rem;
+        width: calc(200vh/3*2 - 18vh - 100px);
+    }
+
+    footer .contact{
+        width: calc(200vh/3 + 5vh - 200px);
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    footer .contact h1{
+        color: hsla(310, 52%, 71%, 0.876);
+        font-family: titleFont;
+        font-size: 1.5rem;
+        
+    }
+
+    footer .contact a{
+        color: #f9feffba;
+        font-family: bodyFont;
+        font-size: 1.1rem;
+        text-decoration: none;
+        margin: 10px 10px;
+    }
