@@ -1,0 +1,15 @@
+
+.appContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appContainer ::selection {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+.mainContent {
+  flex: 1 1 0%;
+}

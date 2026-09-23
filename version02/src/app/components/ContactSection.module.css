@@ -1,0 +1,313 @@
+/* Layout & Container Utama */
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #fafaf9;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+:global(.dark) .section {
+  background-color: #161616;
+}
+
+.container {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Card Utama */
+.contactCard {
+  text-align: center;
+}
+
+/* Tagline / Badge Pill (Pill Style) */
+.sectionTagline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  margin-bottom: 1rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #525252;
+  transition: all 0.2s ease;
+}
+
+:global(.dark) .sectionTagline {
+  background-color: rgba(23, 23, 23, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ab8dcb;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #171717;
+  margin: 0;
+  line-height: 1.1;
+  transition: color 0.2s ease;
+}
+
+:global(.dark) .sectionTitle {
+  color: #ffffff;
+}
+
+@media (min-width: 640px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3.75rem;
+  }
+}
+
+.sectionSubtitle {
+  margin-top: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 36rem;
+  font-size: 0.875rem;
+  color: #525252;
+  line-height: 1.625;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+:global(.dark) .sectionSubtitle {
+  color: #e0e0e3;
+}
+
+@media (min-width: 640px) {
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Tombol Aksi & Media Sosial */
+.actionsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.copyEmailBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #262626;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copyEmailBtn:hover {
+  background-color: #f5f5f5;
+  border-color: #d4d4d4;
+}
+
+:global(.dark) .copyEmailBtn {
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(23, 23, 23, 0.8);
+  color: #d4d4d4;
+}
+
+:global(.dark) .copyEmailBtn:hover {
+  background-color: #262626;
+  border-color: rgba(171, 141, 203, 0.4);
+  color: #ffffff;
+}
+
+.socialBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 9999px;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #262626;
+  text-decoration: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.socialBtn:hover {
+  background-color: #f5f5f5;
+  border-color: #d4d4d4;
+  color: #0a0a0a;
+}
+
+:global(.dark) .socialBtn {
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(23, 23, 23, 0.8);
+  color: #d4d4d4;
+}
+
+:global(.dark) .socialBtn:hover {
+  background-color: #262626;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Formulir */
+.form {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.inputField,
+.textareaField {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  color: #171717;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+:global(.dark) .inputField,
+:global(.dark) .textareaField {
+  border-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(23, 23, 23, 0.8);
+  color: #ffffff;
+}
+
+.inputField::placeholder,
+.textareaField::placeholder {
+  color: #a3a3a3;
+}
+
+.inputField:focus,
+.textareaField:focus {
+  outline: none;
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 2px rgba(111, 66, 193, 0.15);
+}
+
+:global(.dark) .inputField:focus,
+:global(.dark) .textareaField:focus {
+  border-color: #ab8dcb;
+  box-shadow: 0 0 0 2px rgba(171, 141, 203, 0.2);
+}
+
+.textareaField {
+  resize: none;
+}
+
+/* Primary Submit Button Style */
+.submitBtn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  background-color: #171717;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(23, 23, 23, 0.1);
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #262626;
+}
+
+.submitBtn:active {
+  transform: scale(0.98);
+}
+
+:global(.dark) .submitBtn {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+:global(.dark) .submitBtn:hover {
+  background-color: #e5e5e5;
+}
+
+/* Footer Element */
+.footerBar {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #737373;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+:global(.dark) .footerBar {
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #a3a3a3;
+}
+
+/* Icons */
+.iconSmall {
+  width: 1rem;
+  height: 1rem;
+}
+
+.iconMini {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.iconCheck {
+  color: #16a34a;
+}
+
+:global(.dark) .iconCheck {
+  color: #4ade80;
+}
